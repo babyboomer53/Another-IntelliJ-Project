@@ -33,6 +33,11 @@ public class Person {
         return today.get(Calendar.YEAR) - day.get(Calendar.YEAR);
     }
 
+    @Override
+    public String toString() {
+        return "My name is " + getName() + ", and I am " + getAge() + " years old.";
+    }
+
     public static void main(String[] args) {
 
         String name;
@@ -51,6 +56,7 @@ public class Person {
         Person person = new Person(name, year, month, day);
         System.out.println("\nHELLO WORLD!");
         System.out.println("My name is " + person.getName() + ", and I am " + person.getAge() + " years old.");
-
+        System.out.println(person);
+        userInput.close();
     }
 }
