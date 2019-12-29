@@ -27,10 +27,10 @@ public class Person {
     }
 
     public int getAge() {
-        Calendar day = new GregorianCalendar(Year, Month, Day);
+        Calendar birthdate = new GregorianCalendar(Year, Month, Day);
         Calendar today = new GregorianCalendar();
         today.setTime(new Date());
-        return today.get(Calendar.YEAR) - day.get(Calendar.YEAR);
+        return today.get(Calendar.YEAR) - birthdate.get(Calendar.YEAR);
     }
 
     @Override
