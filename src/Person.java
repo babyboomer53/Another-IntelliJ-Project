@@ -58,5 +58,6 @@ public class Person {
         System.out.println("My name is " + person.getName() + ", and I am " + person.getAge() + " years old.");
         System.out.println(person);
         userInput.close();
+
     }
 }
