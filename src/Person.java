@@ -25,7 +25,7 @@ public class Person {
     public String getName() {
         return this.name;
     }
-
+    // Not sure I understand the problem in the following method.
     public int getAge() {
         Calendar birthdate = new GregorianCalendar(Year, Month, Day);
         Calendar today = new GregorianCalendar();
