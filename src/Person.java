@@ -25,6 +25,7 @@ public class Person {
     public String getName() {
         return this.name;
     }
+
     // I'm not sure why the editor does not like my use of the identifier "birthdate"
     public int getAge() {
         Calendar birthdate = new GregorianCalendar(Year, Month, Day);
