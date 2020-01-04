@@ -8,21 +8,21 @@ import java.util.Scanner;
 
 public class Person {
 
-    private String name;
+    private String Name;
     private int Year;
     private int Month;
     private int Day;
 
     // The Constructor
-    Person(String name, int Year, int Month, int Day) {
-        this.name = name;
+    Person(String Name, int Year, int Month, int Day) {
+        this.Name = Name;
         this.Year = Year;
         this.Month = Month;
         this.Day = Day;
     }
 
     public String getName() {
-        return this.name;
+        return this.Name;
     }
 
     public int getAge() {
