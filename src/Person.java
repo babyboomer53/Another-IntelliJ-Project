@@ -1,6 +1,5 @@
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.Scanner;
 
 /**
@@ -26,17 +25,16 @@ public class Person {
         return this.name;
     }
 
-    // I'm not sure why the editor does not like my use of the identifier, "birthdate"
     public int getAge() {
-        Calendar birthdate = new GregorianCalendar(Year, Month, Day);
-        Calendar today = new GregorianCalendar();
-        today.setTime(new Date());
-        return today.get(Calendar.YEAR) - birthdate.get(Calendar.YEAR);
+        LocalDate today = LocalDate.now();                    //Today's date
+        LocalDate birthday = LocalDate.of(Year, Month, Day);  //Birth date
+        Period p = Period.between(birthday, today);
+        return p.getYears();
     }
 
     @Override
     public String toString() {
-        return "My name is " + getName() + ", and I am " + getAge() + " years old.";
+        return String.format("My name is %s, and I am %,d years old.", getName(), getAge());
     }
 
     public static void main(String[] args) {
